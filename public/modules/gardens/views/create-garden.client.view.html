@@ -1,0 +1,52 @@
+<section data-ng-controller="GardensController">
+    <div class="page-header">
+        <h1>New Garden</h1>
+    </div>
+    <map center="[{{lat}},{{lon}}]" zoom ='5'>
+    <marker position="[{{lat}},{{lon}}]" visible="true"></marker>
+    </map>
+
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="title">Garden Title</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="title" id="content" class="form-control" placeholder="Garden Title" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="content">Description</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="content" id="content" class="form-control" placeholder="Description" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label" for="content">Latitude</label>
+                <div class="controls">
+                        <textarea name="lat" data-ng-model="lat" id="lat" class="form-control" cols="10" rows="1" placeholder="Latitude"></textarea>
+                </div>
+                </div>
+<!-- lon -->
+                <div class="form-group">
+                        <label class="control-label" for="content">Longitude</label>
+                                <div class="controls">
+                                        <textarea name="lon" data-ng-model="lon" id="lon" class="form-control" cols="10" rows="1" placeholder="Longitude"></textarea>
+                                </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+                <div data-ng-show="error" class="text-danger">
+                    <strong data-ng-bind="error"></strong>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    
+
+    
+</section>

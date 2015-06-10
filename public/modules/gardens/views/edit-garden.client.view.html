@@ -1,0 +1,43 @@
+<section data-ng-controller="GardensController" data-ng-init="findOne()">
+    <div class="page-header">
+        <h1>Edit Garden</h1>
+    </div>
+    <map zoom ='5'>
+   <marker position="[0,0]" visible="true"> </marker>
+   <!-- a initial position must be set because it will prompt the users current geolocation and set it to that -->
+ </map>
+
+ <div class="form-group" >
+    <label class="control-label" for="lat">Latitude</label>
+    <div class="controls">
+            <textarea name="content" data-ng-model="garden.lat" id="content" class="form-control" cols="10" rows="1" placeholder="Latitude" required>
+            </textarea>
+    </div>
+</div>
+
+<div class="form-group" >
+    <label class="control-label" for="lon">Longitude</label>
+    <div class="controls">
+    <textarea name="content" data-ng-model="garden.lon" id="content" class="form-control" cols="10" rows="1" placeholder="Longitude" required>
+    </textarea>
+    </div>
+</div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="update()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="name">Title</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="garden.title" id="title" class="form-control" placeholder="Title" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

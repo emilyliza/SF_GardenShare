@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://heroku_h6s9z577' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/garden-share',
+	db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/garden-share',
 	assets: {
 		lib: {
 			css: [

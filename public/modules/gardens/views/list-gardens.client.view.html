@@ -2,16 +2,17 @@
     <div class="page-header">
         <h1>Gardens</h1>
     </div>
-    <map center="[0,0]" zoom="1">
+        
+    <map center="[37.762301, -122.450116]" zoom="10">
     <marker ng-repeat='garden in gardens' position='[{{garden.lat}},{{garden.lon}}]' visible="true" on-click="gotolink(event,garden)">
     </marker>
-</map>
+    </map>
 
-<p class="list-group-item-text" data-ng-bind="garden.title"></p>
+<!-- <p class="list-group-item-text" data-ng-bind="garden.title"></p>
 <p class="list-group-item-text" data-ng-bind="garden.content"></p>
 <p class="list-group-item-text" data-ng-bind="garden.lat"></p>
 <p class="list-group-item-text" data-ng-bind="garden.lon"></p>
-
+ -->
     <div class="list-group">
         <a data-ng-repeat="garden in gardens" data-ng-href="#!/gardens/{{garden._id}}" class="list-group-item">
 			<small class="list-group-item-text">
@@ -21,7 +22,7 @@
 				by
 				<span data-ng-bind="garden.user.displayName"></span>
 			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="garden.name"></h4>
+			<!-- <h4 class="list-group-item-heading" data-ng-bind="garden.title"></h4> -->
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!gardens.$resolved || gardens.length">

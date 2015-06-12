@@ -26,21 +26,6 @@ angular.module('gardens').controller('GardensController', ['$scope', '$statePara
                 $scope.error = errorResponse.data.message;
             });
         };
-
-        $scope.$on('mapInitialized', function(event,map) {
-		    var marker = map.markers[0];
-
-			 $scope.$watch('garden.lat + garden.lon',function(newVal,oldVal){
-			    if(newVal === oldVal){return;}
-			              
-			 map.setCenter({lat:$scope.garden.lat,lng:$scope.garden.lon});
-			 marker.setPosition({lat:$scope.garden.lat,lng:$scope.garden.lon});
-           });
-    	});
-
-    	$scope.gotolink= function(event,i) {
-      		$location.path('gardens/'+ i._id);
-    	};
 		
 		// Remove existing Garden
 		$scope.remove = function(garden) {
@@ -81,5 +66,24 @@ angular.module('gardens').controller('GardensController', ['$scope', '$statePara
 				gardenId: $stateParams.gardenId
 			});
 		};
+
+ 		$scope.$on('mapInitialized', function(event,map) {
+		   
+		   var marker = map.markers[0];
+
+			 $scope.$watch('garden.lat + garden.lon',function(newVal,oldVal){
+			              
+			 if(newVal === oldVal){return;}
+			              // checks if value has changed 
+			 map.setCenter({lat:$scope.garden.lat, lon:$scope.garden.lon});
+			 marker.setPosition({lat:$scope.garden.lat, lon:$scope.garden.lon});
+		    
+		    });
+		 });
+
+
+    	$scope.gotolink= function(event,i) {
+      		$location.path('gardens/'+ i._id);
+    	};
 	}
 ]);

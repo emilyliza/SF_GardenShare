@@ -1,11 +1,7 @@
 <section data-ng-controller="GardensController" data-ng-init="findOne()">
 	<div class="page-header">
-		<h1 data-ng-bind="garden.name"></h1>
+		<h1 data-ng-bind="garden.title"></h1>
 	</div>
-	<map zoom ='9'>
-   <marker position="[0,0]" visible="true"> </marker>
- </map>
-
 
  	Title:
  	<p class="lead" data-ng-bind="garden.title"></p>
@@ -33,3 +29,7 @@
 		</em>
 	</small>
 </section>
+
+<!-- <map zoom ='9'>
+   		<marker position="[38, -122]" visible="true"> </marker>
+ 	</map> -->

@@ -1,7 +1,7 @@
 'use strict';
 
 // Gardens controller
-angular.module('gardens').controller('GardensController', ['$scope', '$stateParams', '$location', 'Authentication', 'Gardens', 'ngMap',
+angular.module('gardens').controller('GardensController', ['$scope', '$stateParams', '$location', 'Authentication', 'Gardens',
 	function($scope, $stateParams, $location, Authentication, Gardens) {
 		$scope.authentication = Authentication;
 

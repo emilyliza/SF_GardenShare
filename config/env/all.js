@@ -25,8 +25,8 @@ module.exports = {
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-				'http://maps.google.com/maps/api/js', 
-				'http://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js',
+				'https://maps.google.com/maps/api/js', 
+				'https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js',
 
 			]
 		},

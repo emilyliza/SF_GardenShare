@@ -2,10 +2,9 @@
     <div class="page-header">
         <h1>Edit Garden</h1>
     </div>
-    <map zoom ='5'>
-   <marker position="[0,0]" visible="true"> </marker>
-   <!-- a initial position must be set because it will prompt the users current geolocation and set it to that -->
- </map>
+    <map center="[{{38}},{{-122}}]" zoom ='5'>
+        <marker position="[{{garden.lat}},{{garden.lon}}]" visible="true"> </marker>
+    </map>
 
  <div class="form-group" >
     <label class="control-label" for="lat">Latitude</label>

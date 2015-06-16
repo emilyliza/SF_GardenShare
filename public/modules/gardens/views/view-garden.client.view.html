@@ -2,6 +2,10 @@
 	<div class="page-header">
 		<h1 data-ng-bind="garden.title"></h1>
 	</div>
+	<map center="[{{38}},{{-122}}]" zoom ='5'>
+   		<marker position="[{{garden.lat}},{{garden.lon}}]" visible="true"> </marker>
+ 	</map>
+
 
  	Title:
  	<p class="lead" data-ng-bind="garden.title"></p>

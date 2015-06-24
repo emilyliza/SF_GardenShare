@@ -1,30 +1,9 @@
-/*#one {
- margin: 0;
- background-image: url(/modules/core/img/brand/tomatoes.jpg);
- background-size: 1440px 800px;
- background-repeat:no-repeat;
- display: compact;
- }*/
 
- /*.container {
- 	background-image: url(/modules/core/img/brand/tomatoes.jpg);
- 	background-repeat:no-repeat;
- 	background-size: 1440px 800px;
-}*/
-
-/*.body {
-	background-image: url("modules/core/img/brand/tomatoes.jpg");
-}*/
 
 .jumbotron{
      background: url('/modules/core/img/brand/leaf.png') no-repeat center center !important;
 }
 
-/*.container-full {
-  margin: 0 auto;
-  width: 100%;
-  background-color: gray;
-}*/
 .container-fluid {
 	width: 100%;
 	background-color: green;
@@ -44,8 +23,4 @@
 .ng-valid.ng-dirty {
 	border-color: #78FA89;
 }
-/*#one {
-	background-image: url("modules/core/img/brand/tomatoes.jpg");
-	width: 100%;
 
-}

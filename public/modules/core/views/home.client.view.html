@@ -1,5 +1,5 @@
 
-<section data-ng-controller="HomeController">
+<section id="home" data-ng-controller="HomeController">
 	<br>
     <br>
     <header class="intro">
@@ -32,7 +32,14 @@
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>San Francisco Garden Sharing</h2>
-                    <p>"There is limited green space for food and flowers in this place we call the urban jungle. Matching homeowners (with garden space) to gardeners (with experience) is the perfect solution for cultivating both food production and community. Condo and apartment dwellers are faced with containers or p-patches as their only prospects for vibrant gardens. Homeowners can be overwhelmed by yet-another-garden-project. Together, we make a great team." - from Urban Garden Share website</p> 
+
+                    <p> Fresh local food and beautiful flowers are a vital part of San Francisco's culture and charm. As our population grows, green areas inevitably decrease, making it all that much more important to care and cultivate the green space we do have. Bringing together homeowners (with available garden space) with experienced gardeners is a wonderful way to produce food and create community. </p>
+
+                    <p>Do you have a garden space that is not being used? Would you like to have fresh herbs and maybe a tree or two, but lack the time or know-how? Sign up, post your space and attract a gardener! When you've found a good match, you can arrange a short or long-term plan that is mutually beneficial. </p>
+
+                    <p> Are you a gardener looking for a place to grow lettuce and potatoes? Check out the map below and find a garden space near you. When you see the perfect yard, reach out and make a connection. Great things can happen!</p>
+
+                    
                     <a href="#gardens" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>   
@@ -82,7 +89,7 @@
   <br>
   <br>
 </div>
-<p align="center"><a href="#contact" class="btn btn-circle page-scroll">
+<p align="center"><a href="#add" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a> </p>
     <div class="alert alert-warning text-center" data-ng-hide="!gardens.$resolved || gardens.length">
@@ -104,63 +111,13 @@
     
 
     <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center" data-ng-controller="AuthenticationController">
-    <!-- <h3 class="col-md-12 text-center">Sign up using your social accounts</h3>
-    <div class="col-md-12 text-center">
-        <a href="/auth/facebook" class="undecorated-link">
-            <img src="/modules/users/img/buttons/facebook.png">
-        </a>
-        <a href="/auth/twitter" class="undecorated-link">
-            <img src="/modules/users/img/buttons/twitter.png">
-        </a>
-        <a href="/auth/google" class="undecorated-link">
-            <img src="/modules/users/img/buttons/google.png">
-        </a>
-        <a href="/auth/linkedin" class="undecorated-link">
-            <img src="/modules/users/img/buttons/linkedin.png">
-        </a>
-        <a href="/auth/github" class="undecorated-link">
-            <img src="/modules/users/img/buttons/github.png">
-        </a>
-    </div> -->
-    <h3 class="col-md-12 text-center">Sign Up</h3>
-    <div class="col-xs-offset-2 col-xs-8 col-md-offset-5 col-md-2">
-        <form name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
-            <fieldset>
-                <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name">
-                </div>
-                <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName" class="form-control" data-ng-model="credentials.lastName" placeholder="Last Name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" data-ng-model="credentials.email" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="Username">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">
-                </div>
-                <div class="text-center form-group">
-                    <button type="submit" class="btn btn-large btn-primary">Sign up</button>&nbsp; or&nbsp;
-                    <a href="/#!/signin" class="show-signup">Sign in</a>
-                </div>
-                <div data-ng-show="error" class="text-center text-danger">
-                    <strong data-ng-bind="error"></strong>
-                </div>
-            </fieldset>
-        </form>
-    </div>
+    <section id="add" class="container content-section text-center">
+            <h2> Add invitation to sign up to create garden. </h2>
+
     </section>
 
     <!-- Map Section -->
-    <div id="map"></div>
+
 
     <!-- Footer -->
     <footer>

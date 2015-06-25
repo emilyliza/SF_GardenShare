@@ -15,7 +15,6 @@ module.exports = {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.css',
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
-				'public/modules/core/css/core.css'
 
 			],
 			js: [
@@ -33,7 +32,7 @@ module.exports = {
 			]
 		},
 		css: [
-			'public/modules/**/css/*.css'
+			'public/modules/core/css/core.css'
 
 		],
 		js: [

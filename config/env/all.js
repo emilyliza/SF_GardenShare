@@ -33,6 +33,7 @@ module.exports = {
 		},
 		css: [
 			'public/modules/**/css/*.css',
+			'public/modules/font-awesome/css/font-awesome.min.css'
 
 		],
 		js: [

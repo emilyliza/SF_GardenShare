@@ -32,13 +32,15 @@ module.exports = {
 			]
 		},
 		css: [
-			'public/modules/core/css/core.css'
+			'public/modules/**/css/*.css',
+			'public/modules/font-awesome/css/font-awesome.min.css'
 
 		],
 		js: [
 			'public/config.js',
 			'public/application.js',
-			'public/modules/*/*.js',
+			'public/modules/**/*.js',
+			'public/modules/*/*.js'
 			'public/modules/*/*[!tests]*/*.js',
 
 		],

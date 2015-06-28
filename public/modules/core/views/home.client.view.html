@@ -20,7 +20,7 @@
                         <br>
                         <br>
                         <br>
-                        <a href="/#!/#about" class="btn btn-circle page-scroll">
+                        <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
                         <br>
@@ -38,35 +38,111 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>San Francisco Garden Sharing</h2>
 
-                    <p> Fresh local food and beautiful flowers are a vital part of San Francisco's culture and charm. As our population grows, green areas inevitably decrease, making it all that much more important to care and cultivate the green space we do have. Bringing together homeowners (with available garden space) with experienced gardeners is a wonderful way to produce food and create community. </p>
-
-                    <p>Do you have a garden space that is not being used? Would you like to have fresh herbs and maybe a tree or two, but lack the time or know-how? Sign up, post your space and attract a gardener! When you've found a good match, you can arrange a short or long-term plan that is mutually beneficial. </p>
-
-                    <p> Are you a gardener looking for a place to grow lettuce and potatoes? Check out the map below and find a garden space near you. When you see the perfect yard, reach out and make a connection. Great things can happen!</p>
-
-                    
-                     
+                    <p> Fresh local food and beautiful flowers are a vital part of San Francisco's culture and charm. As our population grows, green areas inevitably decrease, making it important to care and cultivate the green space we do have. Bringing together homeowners (with available garden space) with experienced gardeners is a wonderful way to produce food and create community. </p>
+                   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="purchaseLabel">Purchase</h4>
                 </div>
-                <br>
-                <br>
+                <div class="modal-body">
+                    sup?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Purchase</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
             </div>
     </section>
 
     <!-- Garden Section -->
+
     <section id="gardens" data-ng-controller="GardensController" data-ng-init="find()">
-    <br>
-    <br>
-    <br>
-    <br>
     <div>
         <h1>Local Gardens</h1>
     </div>
-        
-    <map center="[37.762301, -122.450116]" zoom="10">
-    <marker ng-repeat='garden in gardens' position='[{{garden.lat}},{{garden.lon}}]' visible="true" on-click="gotolink(event,garden)">
-    </marker>
-    </map>
+    <br>
+    <!-- div class="container"> -->
+            <div class="row">
+                <div class="col-sm-5 col-sm-offset-1">  
+                  <div class="well well-sm">  
+                  <map center="[37.762301, -122.450116]" zoom="10">
+                  <marker ng-repeat='garden in gardens' position='[{{garden.lat}},{{garden.lon}}]' visible="true" on-click="gotolink(event,garden)">
+                  </marker>
+                  </map>
+                  <br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Find a Garden</button>
 
+                  <!-- Modal -->
+                      <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Gardens</h4>
+                            </div>
+                            <div class="modal-body">
+                              <ul>
+                              <li><a data-ng-repeat="garden in gardens" data-ng-href="#!/gardens/{{garden._id}}" class="list-group-item">
+                          <small class="list-group-item-text">
+                              <h2><span data-ng-bind="garden.title"></span></h2>
+                              Posted on
+                              <span data-ng-bind="garden.created | date:'medium'"></span>
+                              by
+                              <span data-ng-bind="garden.user.displayName"></span>
+                          </small>
+                          <!-- <h4 class="list-group-item-heading" data-ng-bind="garden.title"></h4> -->
+                      </a></li></ul>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                <!-- <div class="dropdown">
+                <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Find a Garden
+                <span class="caret"></span></button>
+                <ul class="btn-block dropdown-menu">
+                  <li><a data-ng-repeat="garden in gardens" data-ng-href="#!/gardens/{{garden._id}}" class="list-group-item">
+                          <small class="list-group-item-text">
+                              <h2><span data-ng-bind="garden.title"></span></h2>
+                              Posted on
+                              <span data-ng-bind="garden.created | date:'medium'"></span>
+                              by
+                              <span data-ng-bind="garden.user.displayName"></span>
+                          </small>
+                          <!<h4 class="list-group-item-heading" data-ng-bind="garden.title"></h4> -->
+                      <!-- </a></li>
+                </ul>
+              </div> -->
+              </div>
+            </div>
+              <div class="col-sm-5">
+                <div class="well well-md">
+                <p>Do you have a garden space that is not being used? Would you like to have fresh herbs and maybe a tree or two, but lack the time or know-how? <a href="/#!/signup">Sign up</a>, post your space on the map and attract a gardener! When you've found a good match, you can arrange a short or long-term plan that is mutually beneficial. </p>
+
+                    <p> Are you a gardener looking for a place to grow lettuce and potatoes? Check out the map and find a garden space near you. When you see the perfect yard, reach out and make a connection. Great things can happen!</p>
+              </div>
+            </div>      
+           </div>       
 <!-- <p class="list-group-item-text" data-ng-bind="garden.title"></p>
 <p class="list-group-item-text" data-ng-bind="garden.content"></p>
 <p class="list-group-item-text" data-ng-bind="garden.lat"></p>
@@ -74,25 +150,8 @@
  -->
  <br>
  <br>
- <div class="dropdown">
-  <button class="btn btn-block btn-default dropdown-toggle" type="button" data-toggle="dropdown">Find a Garden
-  <span class="caret"></span></button>
-  <ul class="btn-block dropdown-menu">
-    <li><a data-ng-repeat="garden in gardens" data-ng-href="#!/gardens/{{garden._id}}" class="list-group-item">
-            <small class="list-group-item-text">
-                <h2><span data-ng-bind="garden.title"></span></h2>
-                Posted on
-                <span data-ng-bind="garden.created | date:'medium'"></span>
-                by
-                <span data-ng-bind="garden.user.displayName"></span>
-            </small>
-            <!-- <h4 class="list-group-item-heading" data-ng-bind="garden.title"></h4> -->
-        </a></li>
-  </ul>
-  <br>
-  <br>
-</div>
-
+ 
+<!-- </div> -->
     <!-- <div class="alert alert-warning text-center" data-ng-hide="!gardens.$resolved || gardens.length">
         No Gardens yet, why don't you <a href="/#!/gardens/create">create one</a>?
     </div> -->

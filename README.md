@@ -3,6 +3,9 @@ This is my 3rd project as a student in General Assembly's Web Development Immers
 Next Steps:
 
 geocode address data
+
 add a second type of user (gardener)
+
 add the ability for users to contact each other via the app
+
 restyle layout using bootstrap
